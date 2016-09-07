@@ -1,8 +1,5 @@
 package com.example.yourturnmobileapp;
 
-/**
- * Created by Keval on 11-12-2015.
- */
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

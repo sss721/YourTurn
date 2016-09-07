@@ -40,9 +40,7 @@ import helper.TaskDatabaseHelper;
 import models.Task;
 import models.User;
 
-/**
- * Created by Apoorva on 10/31/2015.
- */
+
 public class AddTaskActivity extends Activity {
 
     private static final String TAG = "AddTaskActivity";
