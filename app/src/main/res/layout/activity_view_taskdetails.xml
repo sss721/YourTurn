@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:paddingBottom="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.yourturnmobileapp.ViewTaskDetailsActivity" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:foreground="@drawable/appheader"
+            android:src="@drawable/appheader"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Details"
+            android:textColor="#ff8700"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/imageView3"
+            android:layout_alignStart="@+id/imageView3"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginLeft="40dp"
+            android:text="Task ID"
+            android:textColor="#ff8700"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/viewTaskId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_below="@+id/view"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:layout_marginBottom="30dp"
+            android:text="Task Name"
+            android:textColor="#ff8700"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/viewTaskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_alignStart="@+id/viewTaskId"
+            android:layout_alignLeft="@+id/viewTaskId"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_below="@+id/viewTaskId"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:text="Task Desc"
+            android:textColor="#ff8700"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp"/>
+
+
+        <TextView
+            android:id="@+id/viewTaskDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView5"
+            android:layout_alignStart="@+id/viewTaskName"
+            android:layout_alignLeft="@+id/viewTaskName"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_below="@+id/viewTaskName"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_below="@+id/textView5"
+            android:text="Due Date"
+            android:textColor="#ff8700"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/viewDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_alignStart="@+id/viewTaskDesc"
+            android:layout_alignLeft="@+id/viewTaskDesc"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_below="@+id/viewTaskDesc"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:text="Assignee"
+            android:textColor="#ff8700"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/viewAssignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView6"
+            android:layout_alignStart="@+id/viewDueDate"
+            android:layout_alignLeft="@+id/viewDueDate"
+            android:layout_alignTop="@+id/textView6"
+            android:layout_below="@+id/viewDueDate"
+            android:layout_marginBottom="30dp" />
+
+        <ImageButton
+            android:id="@+id/goHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_home_logo"
+            android:layout_below="@+id/textView6"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/swapTask"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_swap_arrows"
+            android:layout_alignTop="@+id/goHome"
+            android:layout_alignLeft="@+id/viewAssignee"
+            android:layout_alignStart="@+id/viewAssignee" />
+
+    </RelativeLayout>
+</ScrollView>

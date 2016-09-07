@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:paddingBottom="16dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.yourturnmobileapp.AddTaskActivity">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:src="@drawable/appheader"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Task"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff8700"
+            android:textSize="35dp"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView"
+            android:background="#c0c0c0"
+            android:layout_marginBottom="30dp"/>
+
+        <EditText
+            android:id="@+id/taskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/view"
+            android:layout_below="@+id/view"
+            android:ems="10"
+            android:hint="Task Name"
+            android:inputType="textPersonName"
+            android:textColorHint="#777777"/>
+
+        <EditText
+            android:id="@+id/taskDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/taskName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/taskName"
+            android:layout_below="@+id/taskName"
+            android:ems="10"
+            android:hint="Task Description"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#777777" />
+
+        <EditText
+            android:id="@+id/dueDate"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/taskDesc"
+            android:layout_alignRight="@+id/taskDesc"
+            android:layout_below="@+id/taskDesc"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="#ffffffff"
+            android:ems="10"
+            android:hint="Due Date"
+            android:inputType="date"
+            android:textColorHint="#777777" />
+
+        <ImageButton
+            android:id="@+id/createTask1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/submitbutton"
+            android:layout_below="@+id/assignee"
+            android:layout_alignRight="@+id/view"
+            android:layout_alignEnd="@+id/assignee"
+            android:layout_marginTop="108dp" />
+
+        <ImageButton
+            android:id="@+id/canTask"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cancelbutton"
+            android:layout_alignTop="@+id/createTask1"
+            android:layout_alignLeft="@+id/dueDate"
+            android:layout_alignStart="@+id/dueDate" />
+
+        <Spinner
+            android:id="@+id/assignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dueDate"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:prompt="@string/select" />
+
+        <EditText
+            android:id="@+id/alarmTimePicker"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="#ffffffff"
+            android:ems="10"
+            android:inputType="date"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/assignee"
+            android:layout_marginBottom="30dp"/>
+
+        <Button
+            android:id="@+id/setReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#03ffffff"
+            android:gravity="left|center_vertical"
+            android:text="Set Reminder"
+            android:layout_below="@id/assignee"
+            android:layout_marginBottom="30dp"
+            android:textColor="#050505" />
+
+    </RelativeLayout>
+</ScrollView>

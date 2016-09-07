@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    package="com.example.yourturnmobileapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:protectionLevel="signature"
+        android:name="com.example.yourturnmobileapp.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.example.yourturnmobileapp.permission.C2D_MESSAGE" />
+
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+    <application
+        android:name="com.example.yourturnmobileapp.ParseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".AddTaskActivity"
+            android:label="activity_label">
+        </activity>
+
+        <activity
+            android:name=".ViewTaskActivity"
+            android:label="activity_label">
+        </activity>
+
+        <activity
+            android:name=".ViewTaskDetailsActivity"
+            android:label="activity_label">
+        </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:label="activity_label">
+
+        </activity>
+
+        <activity android:name="com.example.yourturnmobileapp.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateSupplyList"
+            android:label="@string/title_activity_create_supply_list">
+
+        </activity>
+
+        <activity
+            android:name=".AddMemberActivity"
+            android:label="add_member">
+
+        </activity>
+
+        <activity
+            android:name=".ViewMembersActivity"
+            android:label="view_member">
+
+        </activity>
+
+        <activity
+            android:name=".SwapTasksActivity"
+            android:label="swap_tasks">
+
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login_activity">
+
+        </activity>
+
+        <service
+            android:name="helper.AlarmService"
+            android:enabled="true" />
+        <receiver android:name="helper.AlarmReceiver" android:process=":remote"/>
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="com.example.yourturnmobileapp" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

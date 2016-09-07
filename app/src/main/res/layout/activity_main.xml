@@ -1,0 +1,132 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:src="@drawable/task"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_above="@+id/add"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AppHeader"
+        android:foreground="@drawable/appheader"
+        android:src="@drawable/appheader"
+        android:layout_marginBottom="117dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addmember"
+        android:background="@android:color/transparent"
+        android:src="@drawable/roommate"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignRight="@+id/AppHeader"
+        android:layout_alignEnd="@+id/AppHeader" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ADD TASK"
+        android:id="@+id/add"
+        android:layout_below="@+id/AppHeader"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ADD MEMBERS"
+        android:id="@+id/members"
+        android:layout_alignTop="@+id/add"
+        android:layout_alignRight="@+id/AppHeader"
+        android:layout_alignEnd="@+id/AppHeader" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/supplies"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/members"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:onClick="startCreateSupplyList"
+        android:background="@android:color/transparent"
+        android:src="@drawable/supplies" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SUPPLIES"
+        android:id="@+id/addsupplies"
+        android:layout_below="@+id/supplies"
+        android:onClick="startCreateSupplyList"
+        android:layout_alignLeft="@+id/supplies"
+        android:layout_alignStart="@+id/supplies" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewTasks"
+        android:layout_alignTop="@+id/supplies"
+        android:layout_alignRight="@+id/addmember"
+        android:background="@android:color/transparent"
+        android:layout_alignEnd="@+id/addmember"
+        android:src="@drawable/viewtask" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="VIEW TASK"
+        android:id="@+id/viewtask"
+        android:layout_alignTop="@+id/addsupplies"
+        android:layout_alignRight="@+id/addmember"
+        android:layout_alignEnd="@+id/addmember" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewMembers"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/icon_members"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/viewtask"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="VIEW MEMBERS"
+        android:id="@+id/viewMembersText"
+        android:layout_below="@+id/viewMembers"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+    </ScrollView>
